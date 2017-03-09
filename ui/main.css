@@ -6755,3 +6755,6 @@ body .search-box .form-control {
   width: 96%;
   height: 40px;
 }
+body .search-results {
+  padding-top: 100px;
+}

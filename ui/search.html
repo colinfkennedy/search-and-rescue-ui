@@ -13,7 +13,22 @@
       </div>
     </div>
     <br/>
-    <!--<div><b>Search Results</b></div>-->
-    <div>{{ searchResults }}</div>
+    <!--<input type="checkbox" ng-model="hideSearchResults">-->
+    <div class="search-results" ng-show="showSearchResults">
+      <table class="table table-bordered">
+        <thead class="thead-inverse">
+          <tr>
+            <th>Segment Name</th>
+            <th>Segment ID</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="segment in segmentsData">
+            <td>{{ segment.segmentName }}</td>
+            <td>{{ segment.segmentId }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>

@@ -11,10 +11,8 @@ class SearchAndRescueController {
         // console.log("Search service", this.searchService);
         var options = {
             method: 'POST',
-            uri: 'http://10.182.114.26:8081/nlp-backend/search',
-            body: {
-                searchQuery: JSON.stringify(req.body)
-            },
+            uri: 'http://bearshark.advertising.aol.com:8081/nlp-backend/search',
+            body: req.body,
             headers: {
                 'Content-Type': 'application/json'
             },
@@ -31,6 +29,7 @@ class SearchAndRescueController {
         })
             .catch(function (err) {
             console.error("Error making search request: ", err);
+            res.status(500).send('Something went wrong');
         });
         // this.searchService.makeSearchRequest(req.body).then(response => {
         //   res.send({
