@@ -1,6 +1,6 @@
 <div class="ng-scope" ng-include="'navbar.html'"></div>
 <div class="container-fluid main-container">
-  <div ng-controller="searchCtrl">
+  <div ng-controller="searchCtrl as sc">
     <div>
       <div class="search-box">
         <label class="glyphicon glyphicon-search"></label>
@@ -13,7 +13,6 @@
       </div>
     </div>
     <br/>
-    <!--<input type="checkbox" ng-model="hideSearchResults">-->
     <div class="search-results" ng-show="showSearchResults">
       <table class="table table-bordered">
         <thead class="thead-inverse">
@@ -29,6 +28,27 @@
           </tr>
         </tbody>
       </table>
+    </div>
+    <div class="detail-view" ng-hide="showDetailView">
+      <div class="detail-header">
+        <div class="segment-title">Showing details for: Aol > Demographics > Age-Gender > Female > Female User</div>
+      </div>
+      <div class="detail-row">
+        <div class="pieChart">
+          <canvas id="pieChart" width="100" height="100"></canvas>
+        </div>
+        <div class="lineChart">
+          <canvas id="lineChart" width="100" height="100"></canvas>
+        </div>
+      </div>
+      <div class="detail-row">
+        <div class="barChart">
+          <canvas id="barChart" width="100" height="100"></canvas>
+        </div>
+        <div class="radarChart">
+          <canvas id="radarChart" width="100" height="100"></canvas>
+        </div>
+      </div>
     </div>
   </div>
 </div>

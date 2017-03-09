@@ -5,7 +5,8 @@
   "dependencies": {
     "angular-route": "~1.5.11",
     "one-components": "1.19.0",
-    "d3": "^4.7.1"
+    "d3": "^4.7.1",
+    "chart.js": "^2.5.0"
   },
   "resolutions": {
     "angular-sanitize": "~1.5.11",
