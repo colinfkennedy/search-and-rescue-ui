@@ -70,96 +70,12 @@
 
 /* Styles start here */ 
 body {
+  padding-top: 70px;
   color: @one-color-d0;
   background-color: @one-color-b0;
-  .pipelines {
-    margin-top: @header-height;
-    margin-bottom: @footer-height;
-  }
-
-  .row.pipeline {
-    margin-top: 5px;
-    padding-top: @pipeline-row-padding - 10px;
-    padding-bottom: @pipeline-row-padding;
-    min-height: @pipeline-row-height;
- 
-    h4 {
-      color: @color-primary-1;
-    }
-
-    h3 {
-      color: @color-complement-1;
-    }   
-
-    &.success {
-      color: @green-1;      
-      background-color: fade(@green-3, @bg-opacity);
-    }
-    &.failure {
-      color: @red-1;      
-      background-color: fade(@red-3, @bg-opacity);
-    }
-
-    &.running {
-      color: @yellow-1;     
-      background-color: fade(@yellow-3, @bg-opacity);
-    }
-
-    &.aborted {
-      color: @blue-1;      
-      background-color: fade(@color-secondary-1-1, @bg-opacity);
-    }
-    
-  }
-  
-  .row {
-    .status-line {
-      .status {
-        width: 100%;
-        &.success {
-          color: @green-1;
-          border-bottom: 5px solid @green-3;
-        }
-        &.failure {
-          color: @red-1;
-          border-bottom: 5px solid @red-3;
-        }
-
-        &.running {
-          color: @yellow-1;
-          //border-bottom: 5px solid @yellow-3;
-        }
-
-        &.aborted {
-          color: @blue-1;
-          border-bottom: 5px solid @yellow-3;
-        }
-
-        &.unstable {
-          border-bottom: 5px solid @color-secondary-1-1;
-        }
-      }
-    }
-  }
-
-  .footer {
-    background: fadein(@color-primary-4, 50);
-    min-height: @footer-height;
-    border-top: 1px solid @color-secondary-1-1;
-    padding-top: 10px;
-    font-size: large;
-    position:fixed;
-    left:0;
-    bottom:0;
-    width: 100%;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
-    span {
-      margin-right: 4px;
-    }
+  .bear-shark {
+    background: url("assets/img/bear-shark.jpg") no-repeat scroll 12px 7px transparent;
   }
 }
 
-/* Boostrap overrides - no variables for those :( */ 
-.progress { 
-  height: 5px;
-}
+

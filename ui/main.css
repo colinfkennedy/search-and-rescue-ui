@@ -6734,78 +6734,10 @@ button.close {
 /* Boostrap variables overrides */
 /* Styles start here */
 body {
+  padding-top: 70px;
   color: #212121;
   background-color: #FFFFFF;
 }
-body .pipelines {
-  margin-top: 10px;
-  margin-bottom: 70px;
-}
-body .row.pipeline {
-  margin-top: 5px;
-  padding-top: 10px;
-  padding-bottom: 20px;
-  min-height: 100px;
-}
-body .row.pipeline h4 {
-  color: #949A9E;
-}
-body .row.pipeline h3 {
-  color: #FFFFFF;
-}
-body .row.pipeline.success {
-  color: #6BCC77;
-  background-color: rgba(0, 70, 10, 0.5);
-}
-body .row.pipeline.failure {
-  color: #FF8C86;
-  background-color: rgba(99, 5, 0, 0.5);
-}
-body .row.pipeline.running {
-  color: #FFDE86;
-  background-color: rgba(110, 80, 0, 0.5);
-}
-body .row.pipeline.aborted {
-  color: #6D75B9;
-  background-color: rgba(189, 188, 197, 0.5);
-}
-body .row .status-line .status {
-  width: 100%;
-}
-body .row .status-line .status.success {
-  color: #6BCC77;
-  border-bottom: 5px solid #00460a;
-}
-body .row .status-line .status.failure {
-  color: #FF8C86;
-  border-bottom: 5px solid #630500;
-}
-body .row .status-line .status.running {
-  color: #FFDE86;
-}
-body .row .status-line .status.aborted {
-  color: #6D75B9;
-  border-bottom: 5px solid #6E5000;
-}
-body .row .status-line .status.unstable {
-  border-bottom: 5px solid #BDBCC5;
-}
-body .footer {
-  background: #07141c;
-  min-height: 70px;
-  border-top: 1px solid #BDBCC5;
-  padding-top: 10px;
-  font-size: large;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
-}
-body .footer span {
-  margin-right: 4px;
-}
-/* Boostrap overrides - no variables for those :( */
-.progress {
-  height: 5px;
+body .bear-shark {
+  background: url("assets/img/bear-shark.jpg") no-repeat scroll 12px 7px transparent;
 }

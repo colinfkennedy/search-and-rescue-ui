@@ -1,52 +1,7 @@
 'use strict';
 
-// angular.module('searchAndRescueApp')
-//   .controller('searchCtrl', searchCtrl);
-//
-// searchCtrl.$inject = ['$scope', '$timeout', 'searchService', '$q'];
-//
-// function searchCtrl($scope, $timeout, reportService) {
-//
-//   let vm = this;
-//   let icons = {
-//     SUCCESS: 'leaf',
-//     FAILURE: 'fire',
-//     RUNNING: 'dashboard',
-//     ABORTED: 'ban-circle',
-//     UNSTABLE: 'remove-circle'
-//   };
-//
-//   $scope.pipelines = [];
-//
-//   vm.getIcon = function(pipeline) {
-//     let status = vm.getStatus(pipeline);
-//     return icons[status] || 'question-sign';
-//   };
-//
-//   vm.getDuration = function(duration) {
-//     return moment.duration(duration).humanize();
-//   };
-//
-//   vm.getStatus = function(pipeline) {
-//     if (pipeline.status === null) return 'RUNNING';
-//     return pipeline.status;
-//   };
-//
-//   vm.isInProgress = function(pipeline) {
-//     return vm.getStatus(pipeline) === 'RUNNING';
-//   };
-//
-//   vm.getStatusClass = function(pipeline) {
-//     return vm.getStatus(pipeline).toLowerCase();
-//   };
-//
-//   vm.getVersion = function(pipeline, env) {
-//     return _.find(pipeline.deployedVersions, { env: env }).version;
-//   };
-// }
-
 angular.module('searchAndRescueApp')
-  .controller('searchCtrl', ['$scope', function($scope) {
+  .controller('searchCtrl', ['$scope', function ($scope) {
     $scope.filterOptions = [{
       name: 'name',
       format: 'string',
@@ -108,42 +63,42 @@ angular.module('searchAndRescueApp')
         format: 'list',
         options: {
           items: [
-            { label: '21st century', value: 1000 },
-            { label: '3M', value: 1001 },
-            { label: '5 Takes', value: 1002 },
-            { label: 'AFA', value: 1003 },
-            { label: 'Air New Zealand', value: 1004 },
-            { label: 'Alamo Rental Car', value: 1005 },
-            { label: 'American Greetings', value: 1006 },
-            { label: 'American Legacy Foundation', value: 1007 },
-            { label: 'Adaptv', value: 1008 },
-            { label: 'Microsoft', value: 1009 },
-            { label: 'Aol', value: 1010 },
-            { label: 'Verizon', value: 1011 },
-            { label: '19th century', value: 1012 },
-            { label: '4M', value: 1013 },
-            { label: 'Bloomberg', value: 1014 },
-            { label: 'GAP', value: 1015 },
-            { label: 'CocaCola', value: 1016 },
-            { label: 'ABC', value: 1017 },
-            { label: 'NBC', value: 1018 },
-            { label: 'CNN', value: 1019 },
-            { label: 'BlackBird', value: 1020 },
-            { label: 'Blue', value: 1021 },
-            { label: 'NoClue', value: 1022 },
-            { label: 'BazeMoore', value: 1023 },
-            { label: 'Spice', value: 1024 },
-            { label: 'GermanMakes', value: 1025 },
-            { label: 'Mercedes', value: 1026 },
-            { label: 'Toyota', value: 1027 },
-            { label: 'Vauxhall', value: 1028 },
-            { label: 'Whalemo', value: 1029 },
-            { label: 'Trusty', value: 1030 },
-            { label: 'Wigmo', value: 1031 },
-            { label: 'BlackCat', value: 1032 },
-            { label: 'Lan&Cost', value: 1033 },
-            { label: 'Cannes', value: 1034 },
-            { label: 'Dell', value: 1035 }
+            {label: '21st century', value: 1000},
+            {label: '3M', value: 1001},
+            {label: '5 Takes', value: 1002},
+            {label: 'AFA', value: 1003},
+            {label: 'Air New Zealand', value: 1004},
+            {label: 'Alamo Rental Car', value: 1005},
+            {label: 'American Greetings', value: 1006},
+            {label: 'American Legacy Foundation', value: 1007},
+            {label: 'Adaptv', value: 1008},
+            {label: 'Microsoft', value: 1009},
+            {label: 'Aol', value: 1010},
+            {label: 'Verizon', value: 1011},
+            {label: '19th century', value: 1012},
+            {label: '4M', value: 1013},
+            {label: 'Bloomberg', value: 1014},
+            {label: 'GAP', value: 1015},
+            {label: 'CocaCola', value: 1016},
+            {label: 'ABC', value: 1017},
+            {label: 'NBC', value: 1018},
+            {label: 'CNN', value: 1019},
+            {label: 'BlackBird', value: 1020},
+            {label: 'Blue', value: 1021},
+            {label: 'NoClue', value: 1022},
+            {label: 'BazeMoore', value: 1023},
+            {label: 'Spice', value: 1024},
+            {label: 'GermanMakes', value: 1025},
+            {label: 'Mercedes', value: 1026},
+            {label: 'Toyota', value: 1027},
+            {label: 'Vauxhall', value: 1028},
+            {label: 'Whalemo', value: 1029},
+            {label: 'Trusty', value: 1030},
+            {label: 'Wigmo', value: 1031},
+            {label: 'BlackCat', value: 1032},
+            {label: 'Lan&Cost', value: 1033},
+            {label: 'Cannes', value: 1034},
+            {label: 'Dell', value: 1035}
           ],
           visiblelimit: 100,
           multiselect: true
@@ -156,7 +111,8 @@ angular.module('searchAndRescueApp')
 
     $scope.selectedMatch = 'sfsd';
 
-    $scope.filterChanged = function() { };
+    $scope.filterChanged = function () {
+    };
 
     $scope.filterObject = {};
 
