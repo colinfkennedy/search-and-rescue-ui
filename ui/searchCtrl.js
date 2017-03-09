@@ -68,6 +68,12 @@ function searchController($scope, searchService) {
     });
   };
 
+  vm.showDetailView = function () {
+    $scope.showDetailView = true;
+    $scope.showSearchResults = false;
+    $scope.hideSearchBox = true;
+  };
+
   let pieChartNode = $("#pieChart");
   let myPieChart = new Chart(pieChartNode, {
     type: 'pie',

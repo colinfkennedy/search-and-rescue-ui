@@ -1,35 +1,33 @@
 <div class="ng-scope" ng-include="'navbar.html'"></div>
 <div class="container-fluid main-container">
   <div ng-controller="searchCtrl as sc">
-    <div>
-      <div class="search-box">
-        <label class="glyphicon glyphicon-search"></label>
-        <input type="text"
-               name="searchBox"
-               class="form-control"
-               ng-model="searchQuery"
-               ng-keydown="vm.onSearchBoxKeyPress($event, searchQuery)"
-               placeholder="Powered by #BearShark">
-      </div>
+    <div class="search-box" ng-hide="hideSearchBox">
+      <label class="glyphicon glyphicon-search"></label>
+      <input type="text"
+             name="searchBox"
+             class="form-control"
+             ng-model="searchQuery"
+             ng-keydown="vm.onSearchBoxKeyPress($event, searchQuery)"
+             placeholder="Powered by #BearShark">
     </div>
     <br/>
     <div class="search-results" ng-show="showSearchResults">
       <table class="table table-bordered">
         <thead class="thead-inverse">
-          <tr>
-            <th>Segment Name</th>
-            <th>Segment ID</th>
-          </tr>
+        <tr>
+          <th>Segment Name</th>
+          <th>Segment ID</th>
+        </tr>
         </thead>
         <tbody>
-          <tr ng-repeat="segment in segmentsData">
-            <td>{{ segment.segmentName }}</td>
-            <td>{{ segment.segmentId }}</td>
-          </tr>
+        <tr ng-repeat="segment in segmentsData">
+          <td ng-click="vm.showDetailView()">{{ segment.segmentName }}</td>
+          <td>{{ segment.segmentId }}</td>
+        </tr>
         </tbody>
       </table>
     </div>
-    <div class="detail-view" ng-hide="showDetailView">
+    <div class="detail-view" ng-show="showDetailView">
       <div class="detail-header">
         <div class="segment-title">Showing details for: Aol > Demographics > Age-Gender > Female > Female User</div>
       </div>
