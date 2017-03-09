@@ -74,6 +74,12 @@ function searchController($scope, searchService) {
     $scope.hideSearchBox = true;
   };
 
+  vm.closeDetailView = function () {
+    $scope.showDetailView = false;
+    $scope.showSearchResults = true;
+    $scope.hideSearchBox = false;
+  };
+
   let pieChartNode = $("#pieChart");
   let myPieChart = new Chart(pieChartNode, {
     type: 'pie',

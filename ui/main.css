@@ -6764,6 +6764,9 @@ body .detail-view {
   margin-right: auto;
   padding-top: 30px;
 }
+body .detail-view .closeDetailView {
+  float: right;
+}
 body .detail-view .detail-header .segment-title {
   text-align: center;
   font-weight: bold;
