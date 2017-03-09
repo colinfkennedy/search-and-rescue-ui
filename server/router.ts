@@ -13,7 +13,7 @@ export class AppRouter {
   }
 
   configure(): void {
-    this.router.get('/search', this.searchAndRescueController.search);
+    this.router.post('/search', this.searchAndRescueController.search);
   }
 
   getRouter(): Router {
