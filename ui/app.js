@@ -2,7 +2,8 @@
 
 // Declare app level module which depends on views, and components
 angular.module('searchAndRescueApp', [
-    'ngRoute'
+    'ngRoute',
+    'one.components'
   ])
   .config(applicationBootstrap);
 

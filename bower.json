@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Search and Rescue UI",
   "dependencies": {
-    "one-components": "1.19.0"
+    "angular-route": "~1.5.11",
+    "one-components": "1.19.0",
+    "d3": "^4.7.1"
   },
   "resolutions": {
     "angular-sanitize": "~1.5.11",
