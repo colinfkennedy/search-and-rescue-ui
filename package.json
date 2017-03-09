@@ -1,10 +1,11 @@
 {
   "name": "search-and-rescue",
   "version": "1.0.0",
-  "description": "Search and rescue UI",
+  "description": "Search and Rescue UI",
   "main": "index.js",
   "scripts": {
     "build": "gulp build",
+    "install": "bower install",
     "start": "gulp build && node $NODE_DEBUG_OPTION index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
