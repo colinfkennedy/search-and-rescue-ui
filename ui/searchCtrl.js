@@ -636,11 +636,13 @@ function searchController($scope, searchService) {
       if (!searchTerm) {
         return [];
       }
-      var sortedDataItems = [{key:"colin",value:"Colin's Item"}];
+      var sortedDataItems = [];
 
       console.log("Calling search service");
       searchService.makeSearchRequest().then(function (response) {
+        console.log("Request returned, adding to searchResults", response);
         $scope.searchResults = response.data;
+        sortedDataItems.push(response.data);
       });
 
       // sortedDataItems.push({

@@ -1,23 +1,26 @@
 <div class="ng-scope" ng-include="'navbar.html'"></div>
 <div class="container-fluid main-container">
   <div ng-controller="searchCtrl">
-    <one-smart-search
-        matcher="searchMatcher"
-        on-filter-change="filterChanged(filter)"
-        filter-options="filterOptions"
-        filter="filterObject"
-        smart-search-mode="false"
-        max-num-suggestions="5"
-        max-popup-height="500"
-        show-category-suggestions="true"
-        max-num-filters="2">
-    </one-smart-search>
+    <!--<one-smart-search-->
+        <!--matcher="searchMatcher"-->
+        <!--on-filter-change="filterChanged(filter)"-->
+        <!--filter-options="filterOptions"-->
+        <!--filter="filterObject"-->
+        <!--smart-search-mode="false"-->
+        <!--max-num-suggestions="5"-->
+        <!--max-popup-height="500"-->
+        <!--show-category-suggestions="true"-->
+        <!--max-num-filters="2">-->
+    <!--</one-smart-search>-->
 
-    <br/>
-    <div><b>Filter Object</b></div>
-    <div>{{ filterObject }}</div>
-    <br/>
-    <div><b>Search Results</b></div>
+    <div>
+      <div class="search-box">
+        <label class="glyphicon glyphicon-search"></label>
+        <input type="text" class="form-control">
+      </div>
+    </div>
+
+    <!--<div><b>Search Results</b></div>-->
     <div>{{ searchResults }}</div>
   </div>
 </div>
