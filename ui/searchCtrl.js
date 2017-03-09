@@ -1,14 +1,25 @@
 'use strict';
 
 angular.module('searchAndRescueApp')
-  .controller('searchCtrl', ['$scope', function ($scope) {
-    $scope.filterOptions = [{
+  .controller('searchCtrl', searchController);
+
+searchController.$inject = ['$scope', 'searchService'];
+
+function searchController($scope, searchService) {
+  $scope.filterOptions = [{
       name: 'name',
       format: 'string',
       options: {
         placeholder: 'Custom Placeholder'
       }
     },
+      {
+        name: 'colin',
+        format: 'string',
+        options: {
+          placeholder: 'Colin'
+        }
+      },
       {
         name: 'favNum',
         displayName: 'Favorite Number',
@@ -625,28 +636,33 @@ angular.module('searchAndRescueApp')
       if (!searchTerm) {
         return [];
       }
-      var sortedDataItems = [];
+      var sortedDataItems = [{key:"colin",value:"Colin's Item"}];
 
-      sortedDataItems.push({
-        key: 'keyword',
-        value: searchTerm
+      console.log("Calling search service");
+      searchService.makeSearchRequest().then(function (response) {
+        $scope.searchResults = response.data;
       });
 
-      for (var i = 0; i < $scope.sampleData.length; i++) {
-        var item = $scope.sampleData[i];
-        var keys = Object.keys(item);
-
-        for (var k = 0; k < keys.length; k++) {
-          var key = keys[k];
-          var value = item[key];
-          if ((String(value)).toLowerCase().indexOf(searchTerm.toLowerCase()) >= 0) {
-            var result = {};
-            result[key] = value;
-            sortedDataItems.push(result);
-          }
-        }
-      }
+      // sortedDataItems.push({
+      //   key: 'keyword',
+      //   value: searchTerm
+      // });
+      //
+      // for (var i = 0; i < $scope.sampleData.length; i++) {
+      //   var item = $scope.sampleData[i];
+      //   var keys = Object.keys(item);
+      //
+      //   for (var k = 0; k < keys.length; k++) {
+      //     var key = keys[k];
+      //     var value = item[key];
+      //     if ((String(value)).toLowerCase().indexOf(searchTerm.toLowerCase()) >= 0) {
+      //       var result = {};
+      //       result[key] = value;
+      //       sortedDataItems.push(result);
+      //     }
+      //   }
+      // }
 
       return sortedDataItems;
     };
-  }]);
+};

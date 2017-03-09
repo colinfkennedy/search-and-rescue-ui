@@ -4,11 +4,8 @@ angular.module('searchAndRescueApp')
 searchService.$inject = ['$http'];
 
 function searchService($http) {
-  this.getStatus = function () {
-    return $http.get('/api/pipeline/status');
+  this.makeSearchRequest = function () {
+    console.log("Making get request to api search");
+    return $http.get('/api/search');
   };
-
-  this.getHealthCheck = function () {
-    return $http.get('/api/healthcheck/status');
-  }
 }
