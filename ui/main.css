@@ -6733,6 +6733,9 @@ body a:hover,
 body a:focus {
   cursor: pointer;
 }
+body .navbar-inverse .navbar-right li a {
+  padding: 18px 25px 18px 5px;
+}
 body .bear-shark {
   background: url("assets/img/bear-shark.jpg") no-repeat scroll 12px 7px transparent;
 }
