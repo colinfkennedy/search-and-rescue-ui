@@ -37,7 +37,8 @@ function searchController($scope, $timeout, searchService) {
       console.log("Request returned, adding to searchResults", response);
       $scope.searchResults = response.data;
       $scope.showSearchResults = true;
-      $scope.segmentsData = response.data.data;
+      $scope.segmentsData = response.data.data.segments;
+      $scope.sentence = response.data.data.processedSentence;
     });
   };
 
