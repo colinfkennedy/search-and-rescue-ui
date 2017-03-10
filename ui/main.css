@@ -6762,6 +6762,10 @@ body .detail-view {
 body .detail-view .closeDetailView {
   float: right;
 }
+body .detail-view .closeDetailView .closeImage {
+  width: 20px;
+  height: 20px;
+}
 body .detail-view .detail-header .segment-title {
   text-align: center;
   font-weight: bold;
