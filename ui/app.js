@@ -17,4 +17,9 @@ function applicationBootstrap($locationProvider, $routeProvider) {
       controller: 'searchCtrl',
       controllerAs: 'vm'
     });
+
+  $routeProvider
+    .when('/bear-shark', {
+      templateUrl: 'bearshark.html'
+    });
 }

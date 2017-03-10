@@ -6737,7 +6737,10 @@ body .navbar-inverse .navbar-right li a {
   padding: 18px 25px 18px 5px;
 }
 body .bear-shark {
-  background: url("assets/img/bear-shark.jpg") no-repeat scroll 12px 7px transparent;
+  width: 775px;
+  padding-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
 }
 body .search-box {
   width: 700px;

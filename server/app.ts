@@ -9,6 +9,7 @@ class SearchAndRescueApp {
   run(): void {
     app.use(bodyParser.json());
     app.use('/', express.static('ui'));
+    app.use('/bear-shark', express.static('ui/bearshark.html'));
     app.use('/vendor/', express.static('node_modules'));
     app.use('/app/', express.static('app'));
     app.use('/api/', new AppRouter().getRouter());
