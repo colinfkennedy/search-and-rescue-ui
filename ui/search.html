@@ -17,12 +17,20 @@
         <tr>
           <th>Segment Name</th>
           <th>Segment ID</th>
+          <th>ACE ID</th>
+          <th>Impressions</th>
+          <th>Data Revenue</th>
+          <th>Revenue</th>
         </tr>
         </thead>
         <tbody>
         <tr ng-repeat="segment in segmentsData">
-          <td ><a ng-click="vm.showDetailView()">{{ segment.segmentName }}<a/></td>
+          <td ><a ng-click="vm.showDetailView($index)">{{ segment.segmentLongName }}</a></td>
           <td>{{ segment.segmentId }}</td>
+          <td>{{ segment.aceId }}</td>
+          <td>{{ segment.impressions }}</td>
+          <td>{{ segment.dataRevenue }}</td>
+          <td>{{ segment.revenue }}</td>
         </tr>
         </tbody>
       </table>
@@ -32,7 +40,7 @@
         <i one-icon="oui-cancel-thick"></i>
       </div>
       <div class="detail-header">
-        <div class="segment-title">Showing details for: Aol > Demographics > Age-Gender > Female > Female User</div>
+        <div class="segment-title">Showing details for: {{ detailSegmentViewName }}</div>
       </div>
       <div class="detail-row">
         <div class="pieChart">
