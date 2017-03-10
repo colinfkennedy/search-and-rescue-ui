@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "build": "gulp build",
-    "install": "bower install",
     "start": "gulp build && node $NODE_DEBUG_OPTION index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
