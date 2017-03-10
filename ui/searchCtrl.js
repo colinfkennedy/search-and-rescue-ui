@@ -36,6 +36,7 @@ function searchController($scope, $timeout, searchService) {
     searchService.makeSearchRequest(searchQuery).then(function (response) {
       console.log("Request returned, adding to searchResults", response);
       $scope.searchResults = response.data;
+      $scope.showDetailView = false;
       $scope.showSearchResults = true;
       $scope.resultsPaneShowing = true;
       $scope.segmentsData = response.data.data;
