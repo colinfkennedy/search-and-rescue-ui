@@ -33,6 +33,7 @@ function searchController($scope, $timeout, searchService) {
 
   vm.executeSearch = function (searchQuery) {
     console.log("Calling search service with term: ", searchQuery);
+    $scope.showLoadingSpinner = true;
     searchService.makeSearchRequest(searchQuery).then(function (response) {
       console.log("Request returned, adding to searchResults", response);
       $scope.searchResults = response.data;
@@ -41,6 +42,7 @@ function searchController($scope, $timeout, searchService) {
       $scope.resultsPaneShowing = true;
       $scope.segmentsData = response.data.data.segments;
       $scope.sentence = response.data.data.processedSentence;
+      $scope.showLoadingSpinner = false;
     });
   };
 

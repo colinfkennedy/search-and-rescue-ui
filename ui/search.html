@@ -11,6 +11,9 @@
              placeholder="Powered by #BearShark">
     </div>
     <br/>
+    <div class="loadingSpinner" ng-show="showLoadingSpinner">
+      <div class='uil-spin-css' style='-webkit-transform:scale(0.6)'><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div></div>
+    </div>
     <div class="search-results" ng-show="showSearchResults">
       <div class="sentence">{{sentence}}</div>
       <br/>
