@@ -6749,8 +6749,9 @@ body .search-box .form-control {
   width: 96%;
   height: 40px;
 }
-body .search-results {
-  padding-top: 10px;
+body .searchResultsShowing,
+body .detailViewShowing {
+  padding-top: 0px;
 }
 body .detail-view {
   width: 800px;

@@ -36,7 +36,9 @@ function searchController($scope, $timeout, searchService) {
     searchService.makeSearchRequest(searchQuery).then(function (response) {
       console.log("Request returned, adding to searchResults", response);
       $scope.searchResults = response.data;
+      $scope.showDetailView = false;
       $scope.showSearchResults = true;
+      $scope.resultsPaneShowing = true;
       $scope.segmentsData = response.data.data.segments;
       $scope.sentence = response.data.data.processedSentence;
     });
@@ -46,14 +48,12 @@ function searchController($scope, $timeout, searchService) {
     $scope.detailSegmentViewName = $scope.segmentsData[rowIndex].segmentLongName;
     $scope.showDetailView = true;
     $scope.showSearchResults = false;
-    $scope.hideSearchBox = true;
     $timeout(vm.createGraphs, 0);
   };
 
   vm.closeDetailView = function () {
     $scope.showDetailView = false;
     $scope.showSearchResults = true;
-    $scope.hideSearchBox = false;
     vm.destroyGraphs();
   };
 
