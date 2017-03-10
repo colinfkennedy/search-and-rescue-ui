@@ -39,7 +39,8 @@ function searchController($scope, $timeout, searchService) {
       $scope.showDetailView = false;
       $scope.showSearchResults = true;
       $scope.resultsPaneShowing = true;
-      $scope.segmentsData = response.data.data;
+      $scope.segmentsData = response.data.data.segments;
+      $scope.sentence = response.data.data.processedSentence;
     });
   };
 
