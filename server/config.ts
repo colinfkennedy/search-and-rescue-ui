@@ -1,5 +1,5 @@
 let config = {
-  'searchAndRescueApi': 'http://localhost:8081/nlp-backend/search'
+  'searchAndRescueApi': 'http://bearshark.advertising.aol:8081/nlp-backend/search'
 };
 
 class Config {
