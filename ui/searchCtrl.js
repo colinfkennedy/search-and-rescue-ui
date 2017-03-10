@@ -37,6 +37,7 @@ function searchController($scope, $timeout, searchService) {
       console.log("Request returned, adding to searchResults", response);
       $scope.searchResults = response.data;
       $scope.showSearchResults = true;
+      $scope.resultsPaneShowing = true;
       $scope.segmentsData = response.data.data;
     });
   };
@@ -45,14 +46,12 @@ function searchController($scope, $timeout, searchService) {
     $scope.detailSegmentViewName = $scope.segmentsData[rowIndex].segmentLongName;
     $scope.showDetailView = true;
     $scope.showSearchResults = false;
-    $scope.hideSearchBox = true;
     $timeout(vm.createGraphs, 0);
   };
 
   vm.closeDetailView = function () {
     $scope.showDetailView = false;
     $scope.showSearchResults = true;
-    $scope.hideSearchBox = false;
     vm.destroyGraphs();
   };
 

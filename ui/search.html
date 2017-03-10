@@ -1,7 +1,7 @@
 <div class="ng-scope" ng-include="'navbar.html'"></div>
 <div class="container-fluid main-container">
   <div ng-controller="searchCtrl as sc">
-    <div class="search-box" ng-hide="hideSearchBox">
+    <div class="search-box" ng-class="{detailViewShowing: showDetailView, searchResultsShowing: showSearchResults}">
       <label class="glyphicon glyphicon-search"></label>
       <input type="text"
              name="searchBox"
