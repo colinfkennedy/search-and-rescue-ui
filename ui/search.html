@@ -21,7 +21,7 @@
         </thead>
         <tbody>
         <tr ng-repeat="segment in segmentsData">
-          <td ng-click="vm.showDetailView()">{{ segment.segmentName }}</td>
+          <td ><a ng-click="vm.showDetailView()">{{ segment.segmentName }}<a/></td>
           <td>{{ segment.segmentId }}</td>
         </tr>
         </tbody>
